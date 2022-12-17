@@ -41,16 +41,16 @@ def ImgResConv(mainFolder, resFolder):
         #print(FolderName)
         #input()
         nameInDrags = np.array(os.listdir(FolderName))
-        Count = 1
+        numFile = 1
         for z in nameInDrags:
             full_name = os.path.basename(z)
             extenstion = os.path.splitext(full_name)[1]
             img = Image.open(sMainPath + "\\" + i + "\\" + z)
             img = img.resize((300, 300))
             img = img.convert("L")
-            img.save(sNewPath + "\\" + i + "\\" + str(Count) + extenstion)
-            Count+=1
-            print(sNewPath + "\\" + i + "\\" + str(Count) + extenstion)
+            img.save(sNewPath + "\\" + i + "\\" + str(numFile) + extenstion)
+            numFile+=1
+            print(sNewPath + "\\" + i + "\\" + str(numFile) + extenstion)
     print("Готово!")
 
 # Директории оригинала и результата должны находиться в одной папке с скриптом
