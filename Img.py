@@ -54,4 +54,6 @@ def ImgResConv(mainFolder, resFolder):
     print("Готово!")
 
 # Директории оригинала и результата должны находиться в одной папке с скриптом
-ImgResConv("Black and white", "Black and white test2")
+ImgResConv("Black and white", "Black and white2")
+
+#%%
