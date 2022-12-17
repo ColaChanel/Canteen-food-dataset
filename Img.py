@@ -45,6 +45,9 @@ def ImgResConv(mainFolder, resFolder):
         for z in nameInDrags:
             full_name = os.path.basename(z)
             extenstion = os.path.splitext(full_name)[1]
+            if (extenstion != ".jpg" and ".webp" and ".bmp" and ".jpeg" and ".tiff" and ".gif" and "png"):
+                print(f"Не обработан файл {extenstion} - {z}!")
+                continue
             img = Image.open(sMainPath + "\\" + i + "\\" + z)
             img = img.resize((300, 300))
             img = img.convert("L")
